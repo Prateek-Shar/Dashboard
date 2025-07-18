@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+
+  --font-Poppins : Poppins Medium;
+  --font-Crete : Crete Round;
+  --font-Poet : PoetsenOne;
+  --color-custom : #030712;
+  --color-background : #f8f9fe;
+
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+
+  --animate-show : show 2s ease-in-out forwards;
+
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes colorful {
+    0% {
+      border-color: #dd2d4a;
+    }
+    50% {
+      border-color: #ef233c;
+    }
+    100% {
+      border-color: #d90429;
+    }
+  }
+  
+
+  @keyframes show {
+    0% {
+      opacity : 0.2;
+    }
+
+    50% {
+      opacity : 0.6;
+    }
+
+    100% {
+      opacity : 1;
+    }
+  }
+
+
+}
+
+.animated-border {
+  border: 2px solid;
+  animation: colorful 2s ease-in-out infinite;
+  border-radius: 15px;
+}
+
+/* Disables the spinner arrows in Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
