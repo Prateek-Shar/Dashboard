@@ -104,7 +104,7 @@ const Register_Form:React.FC<ToggleToSwitch> = ( {onSwitch} ) => {
             <form onSubmit={handleSubmit} className="flex flex-col">
                 
                 <div className="w-full ] flex justify-center mt-5">
-                    <input type="text" placeholder="Enter User Name" onChange={handleChange} value={form.Username} name="Username" className="w-[70%] bg-[#e0e6f9] rounded-2xl p-5 placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0"/>
+                    <input type="text" placeholder="Enter User Name" onChange={handleChange} value={form.Username} name="Username" className="font-Poppins w-[70%] bg-[#e0e6f9] rounded-2xl p-5 placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0"/>
                 </div>
                  
                 {errorDiv && (
@@ -122,12 +122,12 @@ const Register_Form:React.FC<ToggleToSwitch> = ( {onSwitch} ) => {
                 )}  
 
                 <div className="w-full mt-8 flex justify-center">
-                    <input type="text" placeholder="Enter Email" value={form.Email} onChange={handleChange} name="Email" className="p-5 w-[70%] bg-[#e0e6f9] rounded-2xl placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0" />
+                    <input type="text" placeholder="Enter Email" value={form.Email} onChange={handleChange} name="Email" className="font-Poppins p-5 w-[70%] bg-[#e0e6f9] rounded-2xl placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0" />
                 </div>
 
                 <div className="w-full flex mt-8 mb-2 justify-center">
                     <div className="w-[60%] bg-[#e0e6f9] rounded-l-2xl">
-                        <input type={typeText ? "text" : "password"} placeholder="Enter Password" value={form.Password} onChange={handleChange} name="Password" className="w-full p-5 placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0"/>
+                        <input type={typeText ? "text" : "password"} placeholder="Enter Password" value={form.Password} onChange={handleChange} name="Password" className="font-Poppins w-full p-5 placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0"/>
                     </div>
 
                     <div className="w-[10%] flex justify-center items-center bg-[#e0e6f9] rounded-r-2xl">
@@ -136,12 +136,9 @@ const Register_Form:React.FC<ToggleToSwitch> = ( {onSwitch} ) => {
                 </div>
 
                 <div className="w-full flex justify-center mt-8">
-                    <input type="text" placeholder="Enter Profession" onChange={handleChange} value={form.Profession} name="Profession" className="w-[70%] rounded-2xl p-5 bg-[#e0e6f9] placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0"/>
+                    <input type="text" placeholder="Enter Profession" onChange={handleChange} value={form.Profession} name="Profession" className="font-Poppins w-[70%] rounded-2xl p-5 bg-[#e0e6f9] placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0"/>
                 </div>
 
-                {/* <div className="w-full p-2 mt-4 flex">
-                    <Checkbox onChange={OnChange} style={{fontFamily : "Poppins Medium" , paddingLeft : "90px"}}>Agree to Terms and Condition</Checkbox>
-                </div> */}
 
                 <div className="w-full p-2 mt-4 flex justify-center">
                     <div className="w-[10%] flex justify-center">

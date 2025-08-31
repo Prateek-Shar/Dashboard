@@ -84,12 +84,12 @@ const Login_form = () => {
                 )}
 
                 <div className="w-[70%] mt-5 ">
-                    <input type="text" placeholder="Enter Username" name="Username" onChange={handleChange} className="p-5 w-full bg-[#e0e6f9] rounded-2xl placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0" />
+                    <input type="text" placeholder="Enter Username" name="Username" onChange={handleChange} className="font-Poppins p-5 w-full bg-[#e0e6f9] rounded-2xl placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0" />
                 </div>
 
                 <div className="w-[70%] flex mt-8 mb-2  justify-center">
                     <div className="w-[90%] bg-[#e0e6f9] rounded-l-2xl">
-                        <input type={typeText ? "text" : "password"} placeholder="Enter Password" name="Password" onChange={handleChange} className="w-full p-5 placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0"/>
+                        <input type={typeText ? "text" : "password"} placeholder="Enter Password" name="Password" onChange={handleChange} className=" font-Poppins w-full p-5 placeholder:text-[#9299a9] placeholder:font-Poppins focus:outline-0"/>
                     </div>
 
                     <div className="w-[10%] flex justify-center items-center bg-[#e0e6f9] rounded-r-2xl">

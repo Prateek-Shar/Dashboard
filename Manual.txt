@@ -1,0 +1,1 @@
+Run npm install vite in order to run the project as node modules is ignored by git

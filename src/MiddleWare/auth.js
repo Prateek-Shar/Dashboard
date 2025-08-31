@@ -1,4 +1,3 @@
-// import { message } from "antd";
 import Session from "../DB/schema/session.js";
 
 const getSessionInfo = async(req , res , next) => {

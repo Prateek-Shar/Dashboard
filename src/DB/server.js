@@ -21,195 +21,6 @@ app.use(cors({
 }));
 app.use(cookieParser());
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname(__filename);
-
-// app.use(express.static(path.join(__dirname, '../Pages')));
-
-
-// app.listen(port , () => {
-//     Connect();
-//     console.log(`Localhost is running at http://localhost:${port}`)
-// })
-
-
-
-
-// const customers = [ 
-//   {
-//     UserID : 101,
-//     Name : "Harsh",
-//     Company_name : "Meta",
-//     Contact_no : 1256936832,
-//     Email : "ghi@gmail.com",
-//     Country : "India",
-//     Status : "Active",
-//     Date_created : new Date()
-//   },
-
-//   {
-//     UserID : 102,
-//     Name : "Prateek",
-//     Company_name : "Google",
-//     Contact_no : 9087123658,
-//     Email : "hji@gmail.com",
-//     Country : "India",
-//     Status : "Active",
-//     Date_created : new Date()
-//   }, 
-
-//   {
-//     UserID: 103,
-//     Name: "Suyash",
-//     Company_name: "Accemture",
-//     Contact_no: 9876574325,
-//     Email: "slk@gmail.com",
-//     Country: "India",
-//     Status: "Inactive",
-//     Date_created : new Date()
-//   },
-
-//   {
-//     UserID: 104,
-//     Name: "Tejas",
-//     Company_name: "Delloite",
-//     Contact_no: 9875789011,
-//     Email: "lio@gmail.com",
-//     Country: "India",
-//     Status: "Inactive",
-//     Date_created : new Date()
-//   },
-
-//   {
-//     UserID: 105,
-//     Name: "Rishabh",
-//     Company_name: "Applus",
-//     Contact_no: 9876521432,
-//     Email: "ajl@gmail.com",
-//     Country: "India",
-//     Status: "Inactive",
-//     Date_created : new Date()
-//   }, 
-
-//   {
-//     UserID : 106,
-//     Name : "Pawan",
-//     Company_name : "Wipro",
-//     Contact_no : 9087542310,
-//     Email : "iop@gmail.com",
-//     Country : "Swedan",
-//     Status : "Active",
-//     Date_Created : new Date()
-//   }, 
-
-//   {
-//     UserID : 107,
-//     Name : "Jayesh",
-//     Company_name : "Capgemini",
-//     Contact_no : 9845672351,
-//     Email : "wop@ghmail.com",
-//     Country : "India",
-//     Status : "Inactive",
-//     Date_Created : new Date()
-//   },
-
-//   {
-//     UserID : 108,
-//     Name : "Ayshman",
-//     Company_name : "De-Shaw",
-//     Contact_no : 8097652415,
-//     Email : "tyu@gmail.com",
-//     Country : "India",
-//     Status : "Active",
-//     Date_Created : new Date()
-//   },
-
-// ];
-
-const Income_dummy = [
-  {
-    Created_at: new Date("2025-07-20"),
-    Source: "Online Sales",
-    Amount: 3000,
-    Catagory: "Grocery",
-    Date : new Date()
-  },
-  {
-    Created_at: new Date("2025-07-10"),
-    Source: "COD",
-    Amount: 1500,
-    Catagory: "Subscription",
-    Date : new Date()
-  },
-
-  {
-    Created_at: new Date(),
-    Source: "Online Sales",
-    Amount: 5000,
-    Catagory: "Games",
-    Date : new Date()
-  },
-  {
-    Created_at: new Date(),
-    Source: "COD",
-    Amount: 50000,
-    Catagory: "Gaming Console",
-    Date : new Date()
-  },
-  {
-    Created_at: new Date(),
-    Source: "COD",
-    Amount: 2800,
-    Catagory: "Salary",
-    Date : new Date()
-  }
-]
-
-
-// const Products = [
-  
-//   {
-//     P_id : 101,
-//     Product_name : "Colgate",
-//     Product_price : 200,
-//     Product_catagory :  "Daily Use",
-//     Product_quantity : 10
-//   },
-
-//   {
-//     P_id : 102,
-//     Product_name : "Monoply",
-//     Product_price : 500,
-//     Product_catagory : "Toys",
-//     Product_quantity : 5
-//   }, 
-
-//   {
-//     P_id : 103,
-//     Product_name : "Taps",
-//     Product_price : 1200,
-//     Product_catagory : "Sanitary",
-//     Product_quantity : 100
-//   },
-
-//   {
-//     P_id : 104,
-//     Product_name : "GTA VI",
-//     Product_price : 10000,
-//     Product_catagory : "Video Game",
-//     Product_quantity : 2
-//   },
-
-//   {
-//     P_id : 105,
-//     Product_name : "Cyberpunk",
-//     Product_price : 2000,
-//     Product_catagory : "Video Game",
-//     Product_quantity : 0
-//   }
-
-
-// ]
 
 
 
@@ -219,16 +30,6 @@ app.listen(port, async () => {
   await Connect();
   console.log(`Server running at http://localhost:${port}`);
 
-  // try {
-  //   const alreadyExists = await Income.countDocuments();
-  //   if (alreadyExists === 0) {
-  //     const inserted = await Income.insertMany(Income_dummy);
-  //   } else {
-  //     console.log("Customers already exist in DB.");
-  //   }
-  // } catch (err) {
-  //   console.error("Insertion error:", err.message);
-  // }
 });
 
 
@@ -356,47 +157,6 @@ app.get("/get_product_statistics", getSessionInfo , async (req, res) => {
 
 
 // Customer Routes -
-// app.get("/get_customers"  , async(req , res) => {
-
-//   try { 
-//     const cus_details = await Customer.find({}).limit(5)
-//     res.status(200).json({details : cus_details});
-//   }
-
-//   catch (error) {
-//     console.log("Error : " , error);
-//     res.status(500)
-//     res.json({error : "Internal server error"})
-//   }
-// })
-
-
-// app.get("/get_customer_name_page", getSessionInfo ,async (req, res) => {
-//     const { page = 1 } = req.query; // default to page 1 if not provided
-//     const limit = 6; // Number of records per page
-
-//     const UID = req.user
-
-//     try {
-//         const customers = await Customer.find({ UID })
-//             .skip((page - 1) * limit) // skip previous pages
-//             .limit(limit);            // limit to "limit" documents
-
-//         const total = await Customer.countDocuments(); // total number of documents
-
-//         res.json({
-//             customers,
-//             total,
-//             page: Number(page),
-//             totalPages: Math.ceil(total / limit)
-//         });
-//     } catch (error) {
-//         console.error("Error fetching paginated data:", error);
-//         res.status(500).json({ error: 'Internal Server Error' });
-//     }
-// });
-
-
 app.get('/search_customer' , getSessionInfo , async (req, res) => {
     const { name } = req.query;
     console.log("Searching for customer:", name);
@@ -485,36 +245,6 @@ app.get("/get_customers" , getSessionInfo , async(req , res) => {
 })
 
 
-// app.get("/get_customer_count", getSessionInfo , async(req , res) => {
-
-//   const UID = req.user;
-
-//   try {
-//     const count = await Customer.countDocuments({ Name: { $exists: true } , UID});
-//     res.status(200).json( {customer_count : count} )
-//   }
-
-//   catch(error) {
-//     res.status(500).json({error : "Internal Server Error"})
-//   }
-
-// })
-
-
-// app.get("/get_active_count" , getSessionInfo , async(req , res) => {
-
-//   const UID = req.user;
-
-//   try {
-//     const count_active_users = await Customer.countDocuments({Status : "Active"} , UID)
-//     res.status(200).json({active_count : count_active_users})
-//   }
-
-//   catch(error) {
-//     res.status(500).json({error : "Internal Server Error"})
-//   }
-// })
-
 
 app.get("/get_customer_stats" , getSessionInfo , async(req , res) => {
 
@@ -527,6 +257,7 @@ app.get("/get_customer_stats" , getSessionInfo , async(req , res) => {
   res.status(200).json({active_member : response1 , total_customer : response2 })
 
 })
+
 
 
 
@@ -575,20 +306,7 @@ app.get("/get_income_detail" , getSessionInfo , async(req , res) => {
   }
 })
 
-// app.get("/getIncomeDetail", getSessionInfo , async (req, res) => {
 
-//   const UID = Number(req.userID)
-//   console.log(UID)
-
-//   try {
-//     const detail = await Income.find({ UID }).select("-_id -__v"); // cleaner, no need for `{}`
-//     res.status(200).json({ Income_details: detail });
-
-//   } catch (error) {
-//     console.error("Error fetching income detail:", error);
-//     res.status(500).json({ error: "Internal Server Error" });
-//   }
-// });
 
 
 app.get("/get_data_by_month", getSessionInfo, async (req, res) => {
